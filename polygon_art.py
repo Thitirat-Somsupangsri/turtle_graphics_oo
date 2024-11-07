@@ -47,8 +47,9 @@ class Polygon:
         turtle.penup()
 
 
-class Polygon_3_size:
+class EmbeddedPolygon(Polygon):
     def __init__(self, side_num: int = 0):
+        super().__init__(side_num)
         self.side_num = side_num
         random_properties = Ran_num()
         self._size = random_properties.size
@@ -111,21 +112,21 @@ for _ in range(30):
         shape = Polygon()
         shape.draw()
     elif art == 5:
-        shape = Polygon_3_size(3)
+        shape = EmbeddedPolygon(3)
         shape.draw_three_sizes()
     elif art == 6:
-        shape = Polygon_3_size(4)
+        shape = EmbeddedPolygon(4)
         shape.draw_three_sizes()
     elif art == 7:
-        shape = Polygon_3_size(5)
+        shape = EmbeddedPolygon(5)
         shape.draw_three_sizes()
     elif art == 8:
-        shape = Polygon_3_size()
+        shape = EmbeddedPolygon()
         shape.draw_three_sizes()
     elif art == 9:
         x = random.randint(1,2)
         if x == 1:
-            shape = Polygon_3_size()
+            shape = EmbeddedPolygon()
             shape.draw_three_sizes()
         if x == 2:
             shape = Polygon()
